@@ -1,0 +1,19 @@
+package com.ignacio.vulnlab.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.HashMap;
+import java.util.Map;
+
+@RestController
+public class RootController {
+
+    @GetMapping("/")
+    public Map<String, String> getStatus() {
+        Map<String, String> response = new HashMap<>();
+        response.put("application", "VulnLab");
+        response.put("version", "1.0.0");
+        response.put("status", "Running");
+        return response;
+    }
+}

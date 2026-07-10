@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+
+spring:
+  application:
+    name: vulnlab
+
+  # CONFIGURACIÓN REAL PARA POSTGRESQL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/vulnlab_db
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: admin
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # Mantendremos Flyway apagado solo un momento más hasta que verifiquemos la conexión inicial
+  flyway:
+    enabled: false
+
+# Configuración de Swagger / OpenAPI (se mantiene igual)
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    try-it-out-enabled: true

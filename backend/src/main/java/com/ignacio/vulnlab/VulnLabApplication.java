@@ -1,13 +1,13 @@
-package com.ignacio.miproyecto.gestion_usuarios;
+package com.ignacio.vulnlab;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GestionUsuariosApplication {
+public class VulnLabApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GestionUsuariosApplication.class, args);
+		SpringApplication.run(VulnLabApplication.class, args);
 	}
 
 }
